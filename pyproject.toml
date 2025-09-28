@@ -1,0 +1,19 @@
+[tool.flake8]
+# Ignores commonly addressed style issues handled by Black and isort
+ignore = ["E203", "E501", "W503"]
+max-line-length = 88
+
+[tool.isort]
+profile = "black" # Use settings compatible with the Black formatter
+
+[tool.black]
+line-length = 88 # Match the line length setting in Flake8
+
+[tool.mypy]
+# Excludes the virtual environment directory from mypy checks
+exclude = ["venv/*"]
+# Additional mypy configuration can go here. For example:
+# disallow_untyped_defs = true
+
+[tool.check]
+command = "isort src/ && black src/ && flake8 src/ && mypy src/"

@@ -1,0 +1,42 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+.env.*
+!.env.example # Keep the example file
+
+# Unit test / coverage reports
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Static analysis cache
+.mypy_cache/
+.flake8
+.isort.cfg
+.black.cfg
+
+# Distribution / packaging
+/dist/
+/build/
+*.egg-info/
+.installed.cfg
+*.egg
+/docs/_build/
+
+# IDE-specific files (remove the ones you don't use)
+# PyCharm
+.idea/
+# VS Code
+.vscode/
+
+# Operating System files
+.DS_Store
+Thumbs.db

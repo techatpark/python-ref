@@ -1,0 +1,20 @@
+# .pre-commit-config.yaml
+repos:
+  - repo: https://github.com/PyCQA/flake8
+    rev: 7.1.0 # Use the latest version
+    hooks:
+      - id: flake8
+        additional_dependencies: [flake8-bugbear] # optional flake8 plugin
+  - repo: https://github.com/psf/black
+    rev: 24.4.2 # Use the latest version
+    hooks:
+      - id: black
+  - repo: https://github.com/pycqa/isort
+    rev: 5.13.2 # Use the latest version
+    hooks:
+      - id: isort
+        args: ["--profile", "black"]
+  - repo: https://github.com/pre-commit/mirrors-mypy
+    rev: v1.11.1 # Use the latest version
+    hooks:
+      - id: mypy
