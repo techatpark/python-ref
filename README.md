@@ -10,3 +10,11 @@ Activating the environment ensures that any packages you install will be added o
 
 - On macOS/Linux: `source venv/bin/activate`
 - On Windows: `venv\Scripts\activate`
+
+### Testing
+
+You run all the testcases with
+
+```shell
+pytest
+```
