@@ -53,6 +53,6 @@ jobs:
       - name: Publish to GitHub Packages
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          user: __token__
+          user: ${{ secrets.GH_PACKAGE_USER }}
           password: ${{ secrets.GITHUB_TOKEN }}
           repository-url: https://pypi.pkg.github.com/techatpark
