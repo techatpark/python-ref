@@ -38,7 +38,7 @@ jobs:
   publish:
     needs: build
     runs-on: ubuntu-latest
-    if: github.event_name == 'release'
+    # if: github.event_name == 'release'
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
@@ -53,6 +53,6 @@ jobs:
       - name: Publish to GitHub Packages
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
-          user: ${{ secrets.GH_PACKAGE_USER }}
+          user: __token__
           password: ${{ secrets.GITHUB_TOKEN }}
           repository-url: https://pypi.pkg.github.com/techatpark
